@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Lambda 表达式 | Java 生态知识库</title>
+    <meta name="generator" content="VuePress 1.9.2">
+    <link rel="icon" href="/img/favicon.ico">
+    <meta name="description" content="一个基于VuePress的Java生态知识库">
+    <meta name="keywords" content="vuepress,theme,blog,java">
+    <meta name="theme-color" content="#11a8cd">
+    
+    <link rel="preload" href="/assets/css/0.styles.2d5b8ad4.css" as="style"><link rel="preload" href="/assets/js/app.e85f9156.js" as="script"><link rel="preload" href="/assets/js/2.ab875fda.js" as="script"><link rel="preload" href="/assets/js/20.3e346b53.js" as="script"><link rel="prefetch" href="/assets/js/10.34af0ecb.js"><link rel="prefetch" href="/assets/js/11.a25fa52d.js"><link rel="prefetch" href="/assets/js/12.13ddc7c2.js"><link rel="prefetch" href="/assets/js/13.56e6e03f.js"><link rel="prefetch" href="/assets/js/14.9edf539d.js"><link rel="prefetch" href="/assets/js/15.caac1535.js"><link rel="prefetch" href="/assets/js/16.df9212f9.js"><link rel="prefetch" href="/assets/js/17.558994a3.js"><link rel="prefetch" href="/assets/js/18.823a8ab8.js"><link rel="prefetch" href="/assets/js/19.a196638e.js"><link rel="prefetch" href="/assets/js/21.ab22491a.js"><link rel="prefetch" href="/assets/js/22.8378cc79.js"><link rel="prefetch" href="/assets/js/23.3d93fae2.js"><link rel="prefetch" href="/assets/js/24.6a791062.js"><link rel="prefetch" href="/assets/js/25.65a829b2.js"><link rel="prefetch" href="/assets/js/26.a890b2ad.js"><link rel="prefetch" href="/assets/js/27.8dfbcc79.js"><link rel="prefetch" href="/assets/js/28.e2b6eff7.js"><link rel="prefetch" href="/assets/js/29.0543e929.js"><link rel="prefetch" href="/assets/js/3.30d15d58.js"><link rel="prefetch" href="/assets/js/30.e4f6cbf2.js"><link rel="prefetch" href="/assets/js/31.0d3ec038.js"><link rel="prefetch" href="/assets/js/32.40531586.js"><link rel="prefetch" href="/assets/js/33.661b80c2.js"><link rel="prefetch" href="/assets/js/34.b0431e99.js"><link rel="prefetch" href="/assets/js/35.da15e0ac.js"><link rel="prefetch" href="/assets/js/4.99b129c6.js"><link rel="prefetch" href="/assets/js/5.457b40d0.js"><link rel="prefetch" href="/assets/js/6.9f9dfb3d.js"><link rel="prefetch" href="/assets/js/7.460ece60.js"><link rel="prefetch" href="/assets/js/8.f5e018d9.js"><link rel="prefetch" href="/assets/js/9.ffd20ed2.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.2d5b8ad4.css">
+  </head>
+  <body class="theme-mode-light">
+    <div id="app" data-server-rendered="true"><div class="theme-container sidebar-open have-rightmenu"><header class="navbar blur"><div title="目录" class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/" class="home-link router-link-active"><img src="/img/logo.png" alt="Java 生态知识库" class="logo"> <span class="site-name can-hide">Java 生态知识库</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/" class="nav-link">首页</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="Java" class="dropdown-title"><!----> <span class="title" style="display:;">Java</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><h4>Java 核心知识</h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/pages/2950ba/" class="nav-link">Java 基础知识</a></li></ul></li><li class="dropdown-item"><h4>Java 版本特性</h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/pages/7ea877/" class="nav-link">Java 8 新特性</a></li></ul></li><li class="dropdown-item"><h4>JVM 相关</h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/pages/bece42/" class="nav-link">Java 类加载机制</a></li></ul></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="算法" class="dropdown-title"><!----> <span class="title" style="display:;">算法</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><h4>算法基础</h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/pages/cef328/" class="nav-link">数据结构</a></li></ul></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="工具" class="dropdown-title"><!----> <span class="title" style="display:;">工具</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/pages/422210/" class="nav-link">开发工具</a></li><li class="dropdown-item"><!----> <a href="/pages/30becd/" class="nav-link">Git</a></li><li class="dropdown-item"><!----> <a href="/pages/f2e32e/" class="nav-link">Docker</a></li></ul></div></div><div class="nav-item"><a href="/pages/20d224/" class="nav-link">资源</a></div><div class="nav-item"><a href="https://github.com/Chen1406736605/java-doc.git" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  Github
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <div class="sidebar-hover-trigger"></div> <aside class="sidebar" style="display:none;"><!----> <nav class="nav-links"><div class="nav-item"><a href="/" class="nav-link">首页</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="Java" class="dropdown-title"><!----> <span class="title" style="display:;">Java</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><h4>Java 核心知识</h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/pages/2950ba/" class="nav-link">Java 基础知识</a></li></ul></li><li class="dropdown-item"><h4>Java 版本特性</h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/pages/7ea877/" class="nav-link">Java 8 新特性</a></li></ul></li><li class="dropdown-item"><h4>JVM 相关</h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/pages/bece42/" class="nav-link">Java 类加载机制</a></li></ul></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="算法" class="dropdown-title"><!----> <span class="title" style="display:;">算法</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><h4>算法基础</h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/pages/cef328/" class="nav-link">数据结构</a></li></ul></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="工具" class="dropdown-title"><!----> <span class="title" style="display:;">工具</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/pages/422210/" class="nav-link">开发工具</a></li><li class="dropdown-item"><!----> <a href="/pages/30becd/" class="nav-link">Git</a></li><li class="dropdown-item"><!----> <a href="/pages/f2e32e/" class="nav-link">Docker</a></li></ul></div></div><div class="nav-item"><a href="/pages/20d224/" class="nav-link">资源</a></div><div class="nav-item"><a href="https://github.com/Chen1406736605/java-doc.git" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  Github
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></div> <!----></nav>  <ul class="sidebar-links"><li><section class="sidebar-group depth-0"><p class="sidebar-heading open"><span>Java 8 新特性</span> <!----></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/pages/7ea877/" class="sidebar-link">Overview</a></li><li><a href="/pages/81ea3b/" aria-current="page" class="active sidebar-link">Lambda 表达式</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header level2"><a href="/pages/81ea3b/#源码解读" class="sidebar-link">源码解读</a></li><li class="sidebar-sub-header level2"><a href="/pages/81ea3b/#jdk-定义的常用函数式接口" class="sidebar-link">JDK 定义的常用函数式接口</a></li><li class="sidebar-sub-header level2"><a href="/pages/81ea3b/#使用场景示例" class="sidebar-link">使用场景示例</a></li><li class="sidebar-sub-header level2"><a href="/pages/81ea3b/#总结" class="sidebar-link">总结</a></li></ul></li><li><a href="/pages/ce7867/" class="sidebar-link">Optional</a></li></ul></section></li></ul> </aside> <div><main class="page"><div class="theme-vdoing-wrapper "><div class="articleInfo-wrap" data-v-06225672><div class="articleInfo" data-v-06225672><ul class="breadcrumbs" data-v-06225672><li data-v-06225672><a href="/" title="首页" class="iconfont icon-home router-link-active" data-v-06225672></a></li> <li data-v-06225672><span data-v-06225672>Java 版本特性</span></li><li data-v-06225672><span data-v-06225672>Java 8 新特性</span></li></ul> <div class="info" data-v-06225672><div title="作者" class="author iconfont icon-touxiang" data-v-06225672><a href="https://github.com/Chen1406736605" target="_blank" title="作者" class="beLink" data-v-06225672>ZhcChen</a></div> <div title="创建时间" class="date iconfont icon-riqi" data-v-06225672><a href="javascript:;" data-v-06225672>2022-06-22</a></div> <!----></div></div></div> <!----> <div class="content-wrapper"><div class="right-menu-wrapper"><div class="right-menu-margin"><div class="right-menu-title">目录</div> <div class="right-menu-content"></div></div></div> <h1><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAAAXNSR0IArs4c6QAABKFJREFUSA3tVl1oFVcQnrMbrak3QUgkya1akpJYcrUtIqW1JvFBE9LiQ5v6JmJpolbMg32rVrhgoYK0QiMY6i9Y6EMaW5D+xFJaTYItIuK2Kr3+BJNwkxBj05sQY3b3nM6cs2dv9t7NT/vQJw/sndk5M/PNzJkzewGerP+pAmy+ON8lLzUJgA8ZYxYIYZmGYRnctDaWvJJAmTtfP1pvXsBCCPP8QFcCaRkZYACgDZFO4stNIcBCajEOlmmC9XpJ9bAGCaPaPmzPl32dvLSVu3BWCTQs0XQQ6g0DYgwLIoAZbBCdW/i+781o1VVlm/410mw4h06Y7bIPHNyWDyL4FHkX03Q8SrzNhZTZriieckWt7cL6MM85YcLpsi/7O9/iXFT6MswI0DmmpkSaJ0qLxFIm3+i1THHB3zmBH3PYx9CcykcLOeQVVa7QtdxTgQgEleX2AjHYfwA+2ddV77ruGoJUbhGDI09YSNXyMpUt5ylOzxgbUmtOp7NmbNt8v3arjTBfYELmLUV+M+nSawNNAUqpT3ClJWg5I3BLT+cGW/DXNGCa6tx1aakCGEigArTn4TDIPdrXXYKCZNrHLMCOEPvHBlLQ99s9eHB7EB6NTki73CVPQ2F5MSx/uRQixfmq7rK0wYD8w8E905bnPDfwoWs/rfv93NWN/ZfvwsLIU7A09gxECyISeGJkHAau98L97tuw7NXnoPyNF8FcYGLGKsOs0mN3OEyec9esGW/ZEl945dTP34wlR2FZVQWU1q0Cw8Tr7p+hgLLNL0FPxx/Q35mA8aEUrH6nCgwEl0tn7wUiZYJnNRh6DK4UH/k0lfyrsBKdPVv/AriGIQcEDQZ65LBAGe2Rzui9Ybjz7XUppz1/uKBbyVPGkN3ZAeC6hr0x7Nr38N5+EqkoOm17xpoqR9ohQF55ERSvr4Dkr3chNfC3DMzGJlNBElW8w9nsGQvhNGIzDkXzCg8cLK951xHsFBlTJspJNi3ZFIMF2AeDV3q8DNOB+YHi6QTrChDIWDBRi5U5f+ZMfJLu3ccrqxtdxk4SKH336LFxSmkqefwU5T8fhdSdQf9IVKD6aNiwI/hnmcAZ91isYMJIaCUCx9W098+LgruikeTqzqqxKPUwqJyCPJiyemVVZBOijDGjD38Os0jOiSPL1z3SPjXNANbiNPXAdzTfukjjuknNBbyz3nwgTd3AVFqUJ5hpHlq9MveLnWwttUfoygBmvVjuikxND3znrhsELnZk7k+OjIGxeNEkomyLVta0xxn+HZhjBc4YZ/AFjHjz9u3xRZl2BN4aq9nFwWh16IrQ1aHHEd3j1+4/dB9OtH4e29A2H1DyHQRmOSfQZ1Fy7MHBTGB6J/Djq6p3OxyO2cB+4Car7v/o3GXgfAkj23+x9ID1Teoamo/SXcbvSf2PX7Vc8DdCmE1vN9di+32P9/5YR3vLnhCVGUWBjEkr3yh4H8v9CzmsbdhzOKzsJKM90iFdaTMjRPhGVsakRvOaRidljo6H6G7j+ctrJpsP+4COhDIl0La2+FS4+5mlocBaXY5QnGZysIBYoeSsl5qQzrSj/cgNrfuEzlWBfwA+EjrZyWUvpAAAAABJRU5ErkJggg==">Lambda 表达式<!----></h1> <div class="page-slot page-slot-top">
+  <div class="wwads-cn wwads-horizontal page-wwads" data-id="136" style="width:100%;max-height:80px;min-height:auto;"></div>
+  <style>
+    .page-wwads img{
+      width:80px!important;
+    }
+    .wwads-horizontal .wwads-content{
+      display: flex;
+      align-items: center;
+    }
+    .wwads-horizontal .wwads-text, .wwads-content .wwads-text{
+      line-height:1;
+      flex: 1;
+      height: 100%;
+      display: flex;
+      align-items: center;
+    }
+    .wwads-horizontal .wwads-poweredby, .wwads-vertical .wwads-poweredby{display: none !important;}
+  </style>
+  </div> <div class="theme-vdoing-content content__default"><h1 id="函数式编程-lambda表达式"><a href="#函数式编程-lambda表达式" class="header-anchor">#</a> 函数式编程（Lambda表达式）</h1> <div class="custom-block tip"><p class="custom-block-title">提示</p> <p>Lambda 表达式作为 Java 8 的一部分被引入 Java 语言。术语<em>lambda 表达式</em>来自<a href="https://en.wikipedia.org/wiki/Lambda_calculus" target="_blank" rel="noopener noreferrer">lambda 演算<span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a>，指的是您创建并作为参数传递给另一个方法的匿名方法（<a href="https://en.wikipedia.org/wiki/Functional_programming" target="_blank" rel="noopener noreferrer">函数式编程<span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a>中使用的一种流行技术）。一旦您理解了语法，您将看到 Java lambda 表达式如何让您在不牺牲可读性的情况下编写更紧凑的 Java 代码（一些人认为，lambda 表达式的简单性使代码<em>更具</em>可读性）。</p></div> <h2 id="源码解读"><a href="#源码解读" class="header-anchor">#</a> 源码解读</h2> <p>我们一步步来理解Lambda，我们先上先上Java 8的函数式接口的注解的源码</p> <div class="language-java extra-class"><pre class="language-java"><code><span class="token comment">/**
+ * An informative annotation type used to indicate that an interface
+ * type declaration is intended to be a &lt;i&gt;functional interface&lt;/i&gt; as
+ * defined by the Java Language Specification.
+ *
+ * Conceptually, a functional interface has exactly one abstract
+ * method.  Since {@linkplain java.lang.reflect.Method#isDefault()
+ * default methods} have an implementation, they are not abstract.  If
+ * an interface declares an abstract method overriding one of the
+ * public methods of {@code java.lang.Object}, that also does
+ * &lt;em&gt;not&lt;/em&gt; count toward the interface's abstract method count
+ * since any implementation of the interface will have an
+ * implementation from {@code java.lang.Object} or elsewhere.
+ *
+ * &lt;p&gt;Note that instances of functional interfaces can be created with
+ * lambda expressions, method references, or constructor references.
+ *
+ * &lt;p&gt;If a type is annotated with this annotation type, compilers are
+ * required to generate an error message unless:
+ *
+ * &lt;ul&gt;
+ * &lt;li&gt; The type is an interface type and not an annotation type, enum, or class.
+ * &lt;li&gt; The annotated type satisfies the requirements of a functional interface.
+ * &lt;/ul&gt;
+ *
+ * &lt;p&gt;However, the compiler will treat any interface meeting the
+ * definition of a functional interface as a functional interface
+ * regardless of whether or not a {@code FunctionalInterface}
+ * annotation is present on the interface declaration.
+ *
+ * @jls 4.3.2. The Class Object
+ * @jls 9.8 Functional Interfaces
+ * @jls 9.4.3 Interface Method Body
+ * @since 1.8
+ */</span>
+<span class="token annotation punctuation">@Documented</span>
+<span class="token annotation punctuation">@Retention</span><span class="token punctuation">(</span><span class="token class-name">RetentionPolicy</span><span class="token punctuation">.</span>RUNTIME<span class="token punctuation">)</span>
+<span class="token annotation punctuation">@Target</span><span class="token punctuation">(</span><span class="token class-name">ElementType</span><span class="token punctuation">.</span>TYPE<span class="token punctuation">)</span>
+<span class="token keyword">public</span> <span class="token annotation punctuation">@interface</span> <span class="token class-name">FunctionalInterface</span> <span class="token punctuation">{</span><span class="token punctuation">}</span>
+</code></pre></div><p>我们主要从注释的内容解析，注释中对函数式接口定义是，该注解作用于接口，且该接口有且只能有一个抽象方法，可以有多个默认方法，例如JDK 1.8中自带的Consumer接口定义如下：</p> <div class="language-java extra-class"><pre class="language-java"><code><span class="token comment">/**
+ * Represents an operation that accepts a single input argument and returns no
+ * result. Unlike most other functional interfaces, {@code Consumer} is expected
+ * to operate via side-effects.
+ *
+ * &lt;p&gt;This is a &lt;a href=&quot;package-summary.html&quot;&gt;functional interface&lt;/a&gt;
+ * whose functional method is {@link #accept(Object)}.
+ *
+ * @param &lt;T&gt; the type of the input to the operation
+ *
+ * @since 1.8
+ */</span>
+<span class="token annotation punctuation">@FunctionalInterface</span>
+<span class="token keyword">public</span> <span class="token keyword">interface</span> <span class="token class-name">Consumer</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">T</span><span class="token punctuation">&gt;</span></span> <span class="token punctuation">{</span>
+
+    <span class="token comment">/**
+     * Performs this operation on the given argument.
+     *
+     * @param t the input argument
+     */</span>
+    <span class="token keyword">void</span> <span class="token function">accept</span><span class="token punctuation">(</span><span class="token class-name">T</span> t<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+    <span class="token comment">/**
+     * Returns a composed {@code Consumer} that performs, in sequence, this
+     * operation followed by the {@code after} operation. If performing either
+     * operation throws an exception, it is relayed to the caller of the
+     * composed operation.  If performing this operation throws an exception,
+     * the {@code after} operation will not be performed.
+     *
+     * @param after the operation to perform after this operation
+     * @return a composed {@code Consumer} that performs in sequence this
+     * operation followed by the {@code after} operation
+     * @throws NullPointerException if {@code after} is null
+     */</span>
+    <span class="token keyword">default</span> <span class="token class-name">Consumer</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">T</span><span class="token punctuation">&gt;</span></span> <span class="token function">andThen</span><span class="token punctuation">(</span><span class="token class-name">Consumer</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token operator">?</span> <span class="token keyword">super</span> <span class="token class-name">T</span><span class="token punctuation">&gt;</span></span> after<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token class-name">Objects</span><span class="token punctuation">.</span><span class="token function">requireNonNull</span><span class="token punctuation">(</span>after<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token keyword">return</span> <span class="token punctuation">(</span><span class="token class-name">T</span> t<span class="token punctuation">)</span> <span class="token operator">-&gt;</span> <span class="token punctuation">{</span> <span class="token function">accept</span><span class="token punctuation">(</span>t<span class="token punctuation">)</span><span class="token punctuation">;</span> after<span class="token punctuation">.</span><span class="token function">accept</span><span class="token punctuation">(</span>t<span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token punctuation">}</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre></div><p>函数式接口定义并非一定要用注解@FunctionalInterface，只要符合函数式接口定义即可，但是实际场景中@FunctionalInterface还是要加上，提示团队中的开发小伙伴，避免小伙伴们误拓展了接口，导致函数接口失效。</p> <p>同时函数式接口不仅仅可用于lambda表达式，还可以用于方法引用或函数构造引用，下面使用常用的集合来体验一下：</p> <div class="language-java extra-class"><pre class="language-java"><code><span class="token comment">// forEach内就是一个lambda表达式</span>
+<span class="token class-name">List</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">String</span><span class="token punctuation">&gt;</span></span> list <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">ArrayList</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token punctuation">&gt;</span></span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+list<span class="token punctuation">.</span><span class="token function">forEach</span><span class="token punctuation">(</span>e <span class="token operator">-&gt;</span> <span class="token punctuation">{</span>
+    <span class="token comment">// TODO 业务操作...</span>
+    <span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span>e<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token comment">// 如果是简单的表达式，可以缩写如下</span>
+<span class="token class-name">List</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">String</span><span class="token punctuation">&gt;</span></span> list <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">ArrayList</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token punctuation">&gt;</span></span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+list<span class="token punctuation">.</span><span class="token function">forEach</span><span class="token punctuation">(</span>e <span class="token operator">-&gt;</span> <span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span>e<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token comment">// 方法引用写法如下</span>
+<span class="token class-name">List</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">String</span><span class="token punctuation">&gt;</span></span> list <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">ArrayList</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token punctuation">&gt;</span></span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+list<span class="token punctuation">.</span><span class="token function">forEach</span><span class="token punctuation">(</span><span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token operator">::</span><span class="token function">println</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token comment">// 构造器引用（Supplier下面会有说明）</span>
+<span class="token class-name">Supplier</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">String</span><span class="token punctuation">&gt;</span></span> supplier <span class="token operator">=</span> <span class="token class-name">String</span><span class="token operator">::</span><span class="token keyword">new</span><span class="token punctuation">;</span>
+<span class="token class-name">String</span> s <span class="token operator">=</span> supplier<span class="token punctuation">.</span><span class="token function">get</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre></div><h2 id="jdk-定义的常用函数式接口"><a href="#jdk-定义的常用函数式接口" class="header-anchor">#</a> JDK 定义的常用函数式接口</h2> <p>JDK 1.8 有提供了一部分函数式接口定义，下面列举常用的几个接口如下（<a href="https://www.matools.com/file/manual/jdk_api_1.8_google/java/util/function/package-frame.html" target="_blank" rel="noopener noreferrer">java.util.function<span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a> 包下是Java8预定义的一些函数接口，当然不止这些，还有其他接口也有使用，例如Runnable就是很好的例子）：</p> <table><thead><tr><th style="text-align:left;">接口名</th> <th style="text-align:left;">参数类型</th> <th>返回类型</th> <th style="text-align:left;">抽象方法名</th> <th style="text-align:left;">描述</th> <th style="text-align:left;">其他方法</th></tr></thead> <tbody><tr><td style="text-align:left;">Consumer&lt;T&gt;</td> <td style="text-align:left;">T</td> <td>void</td> <td style="text-align:left;">accept</td> <td style="text-align:left;">处理一个T类型的值</td> <td style="text-align:left;">andThen</td></tr> <tr><td style="text-align:left;">Function&lt;T,R&gt;</td> <td style="text-align:left;">T</td> <td>R</td> <td style="text-align:left;">apply</td> <td style="text-align:left;">有一个T类型参数的函数</td> <td style="text-align:left;">compose,andThen,identity</td></tr> <tr><td style="text-align:left;">Supplier&lt;T&gt;</td> <td style="text-align:left;">无</td> <td>T</td> <td style="text-align:left;">get</td> <td style="text-align:left;">提供一个T类型的值</td> <td style="text-align:left;">无</td></tr> <tr><td style="text-align:left;">Predicate&lt;T&gt;</td> <td style="text-align:left;">T</td> <td>boolean</td> <td style="text-align:left;">test</td> <td style="text-align:left;">返回布尔值的函数</td> <td style="text-align:left;">and,or,negate,isEqual</td></tr> <tr><td style="text-align:left;">BiConsumer&lt;T,U&gt;</td> <td style="text-align:left;">T,U</td> <td>void</td> <td style="text-align:left;">accept</td> <td style="text-align:left;">处理T和U类型的值</td> <td style="text-align:left;">andThen</td></tr> <tr><td style="text-align:left;">BiFunction&lt;T,U,R&gt;</td> <td style="text-align:left;">T,U</td> <td>R</td> <td style="text-align:left;">apply</td> <td style="text-align:left;">有T和U类型参数的函数</td> <td style="text-align:left;">compose,andThen,identity</td></tr> <tr><td style="text-align:left;">BiPredicate&lt;T,U&gt;</td> <td style="text-align:left;">T,U</td> <td>boolean</td> <td style="text-align:left;">test</td> <td style="text-align:left;">返回布尔值的函数</td> <td style="text-align:left;">and,or,negate,isEqual</td></tr> <tr><td style="text-align:left;">Runnable</td> <td style="text-align:left;">无</td> <td>void</td> <td style="text-align:left;">run</td> <td style="text-align:left;">作为无参数或返回值的动作运行</td> <td style="text-align:left;">无</td></tr></tbody></table> <h2 id="使用场景示例"><a href="#使用场景示例" class="header-anchor">#</a> 使用场景示例</h2> <p>我们来个使用场景来上手一下（这里使用Consumer）：场景定义-&gt;定义一个手机工具类，传入区号（+86）和手机号（15300000000），拨打电话前执行一些业务逻辑，然后拨打电话，代码如下：</p> <div class="language-java extra-class"><pre class="language-java"><code><span class="token comment">/**
+ * 首先定义一个电话工具类
+ * 
+ * @author ZhcChen
+ * @since 2022-04-14 14:11:10
+ */</span>
+<span class="token annotation punctuation">@Data</span>
+<span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">PhoneUtil</span> <span class="token punctuation">{</span>
+    <span class="token keyword">private</span> <span class="token class-name">String</span> code<span class="token punctuation">;</span>
+    <span class="token keyword">private</span> <span class="token class-name">String</span> phoneNumber<span class="token punctuation">;</span>
+
+    <span class="token keyword">private</span> <span class="token class-name">PhoneUtil</span><span class="token punctuation">(</span><span class="token class-name">String</span> code<span class="token punctuation">,</span> <span class="token class-name">String</span> phoneNumber<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">this</span><span class="token punctuation">.</span>code <span class="token operator">=</span> code<span class="token punctuation">;</span>
+        <span class="token keyword">this</span><span class="token punctuation">.</span>phoneNumber <span class="token operator">=</span> phoneNumber<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token class-name">PhoneUtil</span> <span class="token function">of</span><span class="token punctuation">(</span><span class="token class-name">String</span> code<span class="token punctuation">,</span> <span class="token class-name">String</span> phoneNumber<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">return</span> <span class="token keyword">new</span> <span class="token class-name">PhoneUtil</span><span class="token punctuation">(</span>code<span class="token punctuation">,</span> phoneNumber<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">call</span><span class="token punctuation">(</span><span class="token class-name">Consumer</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">PhoneUtil</span><span class="token punctuation">&gt;</span></span> consumer<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        consumer<span class="token punctuation">.</span><span class="token function">accept</span><span class="token punctuation">(</span><span class="token keyword">this</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token comment">// TODO 这里省略工具内部的检查号码逻辑</span>
+        <span class="token comment">// ...</span>
+        <span class="token comment">// TODO 这里省略调用打电话逻辑...</span>
+        <span class="token comment">// ...</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre></div><div class="language-java extra-class"><pre class="language-java"><code><span class="token comment">// 拨打电话</span>
+<span class="token class-name">PhoneUtil</span><span class="token punctuation">.</span><span class="token function">of</span><span class="token punctuation">(</span><span class="token string">&quot;+86&quot;</span><span class="token punctuation">,</span> <span class="token string">&quot;15300000000&quot;</span><span class="token punctuation">)</span>
+        <span class="token punctuation">.</span><span class="token function">call</span><span class="token punctuation">(</span>phone <span class="token operator">-&gt;</span> <span class="token punctuation">{</span>
+            <span class="token comment">// TODO 可能根据业务需要，比如一些黑名单用户无法拨打，这里省略判断黑名单用户逻辑</span>
+            <span class="token comment">// ...</span>
+            <span class="token comment">// TODO 可能还有其他业务，比如拨打电话前的会给用户发送推荐广告短信等，这里省略发送推荐广告短信等操作</span>
+            <span class="token comment">// ...</span>
+        <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre></div><p>然后，其实这个场景是通过抛出业务异常来中断，实际中，可能我要求不抛出异常，只是没有达到业务条件下仅仅不拨打电话，那消费型的Consumer就不符合我们的需要了，我们根据上面的这个表格看，Predicate有返回标识能满足我们的需求，调整代码如下：</p> <div class="language-java extra-class"><pre class="language-java"><code><span class="token annotation punctuation">@Data</span>
+<span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">PhoneUtil</span> <span class="token punctuation">{</span>
+    <span class="token keyword">private</span> <span class="token class-name">String</span> code<span class="token punctuation">;</span>
+    <span class="token keyword">private</span> <span class="token class-name">String</span> phoneNumber<span class="token punctuation">;</span>
+
+    <span class="token keyword">private</span> <span class="token class-name">PhoneUtil</span><span class="token punctuation">(</span><span class="token class-name">String</span> code<span class="token punctuation">,</span> <span class="token class-name">String</span> phoneNumber<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">this</span><span class="token punctuation">.</span>code <span class="token operator">=</span> code<span class="token punctuation">;</span>
+        <span class="token keyword">this</span><span class="token punctuation">.</span>phoneNumber <span class="token operator">=</span> phoneNumber<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token class-name">PhoneUtil</span> <span class="token function">of</span><span class="token punctuation">(</span><span class="token class-name">String</span> code<span class="token punctuation">,</span> <span class="token class-name">String</span> phoneNumber<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">return</span> <span class="token keyword">new</span> <span class="token class-name">PhoneUtil</span><span class="token punctuation">(</span>code<span class="token punctuation">,</span> phoneNumber<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">call</span><span class="token punctuation">(</span><span class="token class-name">Predicate</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">PhoneUtil</span><span class="token punctuation">&gt;</span></span> predicate<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">if</span> <span class="token punctuation">(</span>predicate<span class="token punctuation">.</span><span class="token function">test</span><span class="token punctuation">(</span><span class="token keyword">this</span><span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            <span class="token comment">// TODO 这里省略工具内部的检查号码逻辑</span>
+            <span class="token comment">// ...</span>
+            <span class="token comment">// TODO 这里省略调用打电话逻辑...</span>
+            <span class="token comment">// ...</span>
+        <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre></div><div class="language-java extra-class"><pre class="language-java"><code><span class="token class-name">PhoneUtil</span><span class="token punctuation">.</span><span class="token function">of</span><span class="token punctuation">(</span><span class="token string">&quot;+86&quot;</span><span class="token punctuation">,</span> <span class="token string">&quot;15300000000&quot;</span><span class="token punctuation">)</span>
+        <span class="token punctuation">.</span><span class="token function">call</span><span class="token punctuation">(</span>phone <span class="token operator">-&gt;</span> <span class="token punctuation">{</span>
+            <span class="token keyword">boolean</span> flag <span class="token operator">=</span> <span class="token boolean">false</span><span class="token punctuation">;</span>
+            <span class="token comment">// TODO 可能根据业务需要，比如一些黑名单用户无法拨打</span>
+            <span class="token comment">// 这里省略判断黑名单用户...，通过操作flag标记</span>
+            <span class="token comment">// TODO 可能还有其他业务，比如拨打电话前的会给用户发送推荐广告短信等</span>
+            <span class="token comment">// 这里省略发送推荐广告短信等操作...</span>
+            <span class="token keyword">return</span> flag<span class="token punctuation">;</span>
+        <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre></div><p>函数式编程（Lambda）简单理解就是，通过定义函数接口，使用时实现函数接口定义的具体逻辑，以Consumer来说，其实就是简单的接收phone参数，然后自定义业务（当然也可以什么都不做），对于有返回值类型的Predicate，相比于Consumer来说就是多了返回参数boolean。</p> <p>上面我们都是用预定义的函数接口，那我们再来拓展一下上面的场景：原先操作的只有PhoneUtil，我们对工具内做个拓展，根据手机号，对应查询到用户信息和对这个用户已拨打的记录。代码如下：</p> <div class="language-java extra-class"><pre class="language-java"><code><span class="token comment">/**
+ * 用户信息类
+ * 
+ * @author ZhcChen
+ * @since 2022-04-15 11:00:02
+ */</span>
+<span class="token annotation punctuation">@Data</span>
+<span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">UserInfo</span> <span class="token punctuation">{</span>
+
+    <span class="token keyword">private</span> <span class="token class-name">String</span> userName<span class="token punctuation">;</span>
+    <span class="token keyword">private</span> <span class="token class-name">Integer</span> age<span class="token punctuation">;</span>
+    <span class="token comment">// ...等等其他字段省略</span>
+
+<span class="token punctuation">}</span>
+</code></pre></div><div class="language-java extra-class"><pre class="language-java"><code><span class="token comment">/**
+ * 拨打记录
+ * 
+ * @author ZhcChen
+ * @since 2022-04-15 11:01:29
+ */</span>
+<span class="token annotation punctuation">@Data</span>
+<span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">CallRecord</span> <span class="token punctuation">{</span>
+
+    <span class="token keyword">private</span> <span class="token class-name">Date</span> callDateTime<span class="token punctuation">;</span>
+    <span class="token keyword">private</span> <span class="token class-name">Long</span> callDuration<span class="token punctuation">;</span>
+    <span class="token comment">// ...等等其他拨打的记录信息省略</span>
+
+<span class="token punctuation">}</span>
+</code></pre></div><div class="language-java extra-class"><pre class="language-java"><code><span class="token comment">/**
+ * 自定义多参数函数接口
+ *
+ * @author ZhcChen
+ * @since 2022-04-15 10:57:29
+ */</span>
+<span class="token annotation punctuation">@FunctionalInterface</span>
+<span class="token keyword">public</span> <span class="token keyword">interface</span> <span class="token class-name">CustomPredicate</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">A</span><span class="token punctuation">,</span> <span class="token class-name">B</span><span class="token punctuation">,</span> <span class="token class-name">C</span><span class="token punctuation">&gt;</span></span> <span class="token punctuation">{</span>
+
+    <span class="token keyword">boolean</span> <span class="token function">test</span><span class="token punctuation">(</span><span class="token class-name">A</span> a<span class="token punctuation">,</span> <span class="token class-name">B</span> b<span class="token punctuation">,</span> <span class="token class-name">C</span> c<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token punctuation">}</span>
+</code></pre></div><div class="language-java extra-class"><pre class="language-java"><code><span class="token comment">/**
+ * 首先定义一个电话工具类
+ *
+ * @author ZhcChen
+ * @since 2022-04-14 14:11:10
+ */</span>
+<span class="token annotation punctuation">@Data</span>
+<span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">PhoneUtil</span> <span class="token punctuation">{</span>
+    <span class="token keyword">private</span> <span class="token class-name">String</span> code<span class="token punctuation">;</span>
+    <span class="token keyword">private</span> <span class="token class-name">String</span> phoneNumber<span class="token punctuation">;</span>
+
+    <span class="token keyword">private</span> <span class="token class-name">PhoneUtil</span><span class="token punctuation">(</span><span class="token class-name">String</span> code<span class="token punctuation">,</span> <span class="token class-name">String</span> phoneNumber<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">this</span><span class="token punctuation">.</span>code <span class="token operator">=</span> code<span class="token punctuation">;</span>
+        <span class="token keyword">this</span><span class="token punctuation">.</span>phoneNumber <span class="token operator">=</span> phoneNumber<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token class-name">PhoneUtil</span> <span class="token function">of</span><span class="token punctuation">(</span><span class="token class-name">String</span> code<span class="token punctuation">,</span> <span class="token class-name">String</span> phoneNumber<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">return</span> <span class="token keyword">new</span> <span class="token class-name">PhoneUtil</span><span class="token punctuation">(</span>code<span class="token punctuation">,</span> phoneNumber<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">call</span><span class="token punctuation">(</span><span class="token class-name">CustomPredicate</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">PhoneUtil</span><span class="token punctuation">,</span> <span class="token class-name">UserInfo</span><span class="token punctuation">,</span> <span class="token class-name">List</span><span class="token punctuation">&lt;</span><span class="token class-name">CallRecord</span><span class="token punctuation">&gt;</span><span class="token punctuation">&gt;</span></span> predicate<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token comment">// 这里实际根据手机号从数据库中查询出来的数据，省略对应步骤</span>
+        <span class="token class-name">UserInfo</span> userInfo <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">UserInfo</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token class-name">List</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">CallRecord</span><span class="token punctuation">&gt;</span></span> callRecordList <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">ArrayList</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token punctuation">&gt;</span></span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token comment">// 执行原型逻辑</span>
+        <span class="token keyword">if</span> <span class="token punctuation">(</span>predicate<span class="token punctuation">.</span><span class="token function">test</span><span class="token punctuation">(</span><span class="token keyword">this</span><span class="token punctuation">,</span> userInfo<span class="token punctuation">,</span> callRecordList<span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            <span class="token comment">// TODO 这里省略工具内部的检查号码逻辑</span>
+            <span class="token comment">// ...</span>
+            <span class="token comment">// TODO 这里省略调用打电话逻辑...</span>
+            <span class="token comment">// ...</span>
+        <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre></div><div class="language-java extra-class"><pre class="language-java"><code><span class="token comment">// 参数列表里面就多了我们需要的拓展信息对象userInfo和callRecordList</span>
+<span class="token class-name">PhoneUtil</span><span class="token punctuation">.</span><span class="token function">of</span><span class="token punctuation">(</span><span class="token string">&quot;+86&quot;</span><span class="token punctuation">,</span> <span class="token string">&quot;15300000000&quot;</span><span class="token punctuation">)</span>
+        <span class="token punctuation">.</span><span class="token function">call</span><span class="token punctuation">(</span><span class="token punctuation">(</span>phone<span class="token punctuation">,</span> userInfo<span class="token punctuation">,</span> callRecordList<span class="token punctuation">)</span> <span class="token operator">-&gt;</span> <span class="token punctuation">{</span>
+            <span class="token keyword">boolean</span> flag <span class="token operator">=</span> <span class="token boolean">false</span><span class="token punctuation">;</span>
+            <span class="token comment">// TODO 可能根据业务需要，比如一些黑名单用户无法拨打</span>
+            <span class="token comment">// 这里省略判断黑名单用户...，通过操作flag标记</span>
+            <span class="token comment">// TODO 可能还有其他业务，比如拨打电话前的会给用户发送推荐广告短信等</span>
+            <span class="token comment">// 这里省略发送推荐广告短信等操作...</span>
+            <span class="token comment">// TODO 这里根据用户信息userInfo和拨打记录callRecordList拓展业务</span>
+            <span class="token comment">// 这里省略拓展业务逻辑...</span>
+            <span class="token keyword">return</span> flag<span class="token punctuation">;</span>
+        <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre></div><h2 id="总结"><a href="#总结" class="header-anchor">#</a> 总结</h2> <p>上面的场景仅仅是对Lambda简单使用的例子，如果做不到理解的同学可以对前后的流程重新过一遍，明确函数接口的前后提供了什么，对比以前传统有什么区别，每个的理解点不同。同时我也推荐可以结合下章节的Optional类来理解学习，Optional也使用了函数式编程的思想。</p></div></div>  <div class="page-edit"><!----> <!----> <div class="last-updated"><span class="prefix">上次更新:</span> <span class="time">2022/06/23, 10:01:03</span></div></div> <div class="page-nav-wapper"><div class="page-nav-centre-wrap"><a href="/pages/7ea877/" class="page-nav-centre page-nav-centre-prev"><div class="tooltip">Overview</div></a> <a href="/pages/ce7867/" class="page-nav-centre page-nav-centre-next"><div class="tooltip">Optional</div></a></div> <div class="page-nav"><p class="inner"><span class="prev">
+        ←
+        <a href="/pages/7ea877/" class="prev">Overview</a></span> <span class="next"><a href="/pages/ce7867/">Optional</a>→
+      </span></p></div></div></div> <!----></main></div> <div class="footer"><div class="icons"><a href="https://mail.qq.com/" title="发邮件" target="_blank" class="iconfont icon-youjian"></a><a href="https://github.com/Chen1406736605/java-doc.git" title="Github" target="_blank" class="iconfont icon-github"></a><a href="https://music.163.com/#/playlist?id=755597173" title="听音乐" target="_blank" class="iconfont icon-erji"></a></div> 
+  Theme by
+  <a href="https://github.com/xugaoyi/vuepress-theme-vdoing" target="_blank" title="本站主题">Vdoing</a> 
+    | Copyright © 2022-2022
+    <span>ZhcChen | MIT License</span></div> <div class="buttons"><div title="返回顶部" class="button blur go-to-top iconfont icon-fanhuidingbu" style="display:none;"></div> <div title="去评论" class="button blur go-to-comment iconfont icon-pinglun" style="display:none;"></div> <div title="主题模式" class="button blur theme-mode-but iconfont icon-zhuti"><ul class="select-box" style="display:none;"><li class="iconfont icon-zidong">
+          跟随系统
+        </li><li class="iconfont icon-rijianmoshi">
+          浅色模式
+        </li><li class="iconfont icon-yejianmoshi">
+          深色模式
+        </li><li class="iconfont icon-yuedu">
+          阅读模式
+        </li></ul></div></div> <!----> <!----> <!----></div><div class="global-ui"></div></div>
+    <script src="/assets/js/app.e85f9156.js" defer></script><script src="/assets/js/2.ab875fda.js" defer></script><script src="/assets/js/20.3e346b53.js" defer></script>
+  </body>
+</html>
