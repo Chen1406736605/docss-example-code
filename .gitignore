@@ -33,4 +33,6 @@ build/
 ### VS Code ###
 .vscode/
 
- **/log/
+### log ###
+/spring-boot-docker-example/log/
+/spring-boot-docker-example/docker/log/
